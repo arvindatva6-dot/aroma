@@ -7,6 +7,8 @@ import HomePage from './pages/Home';
 import LoginPage from './pages/Login';
 import RegisterPage from './pages/Register';
 import ProductsPage from './pages/Products';
+import CartPage from './pages/Cart';
+import CheckoutPage from './pages/Checkout';
 
 // Components
 import ToastContainer from './components/Toast';
@@ -70,8 +72,15 @@ function App() {
           {/* <Route path="/product/:id" element={<ProductDetails />} /> */}
 
           {/* Protected Routes */}
-          {/* <Route path="/cart" element={<ProtectedRoute><CartPage /></ProtectedRoute>} /> */}
-          {/* <Route path="/checkout" element={<ProtectedRoute><CheckoutPage /></ProtectedRoute>} /> */}
+          <Route path="/cart" element={<CartPage />} />
+          <Route
+            path="/checkout"
+            element={
+              <ProtectedRoute>
+                <CheckoutPage />
+              </ProtectedRoute>
+            }
+          />
           {/* <Route path="/orders" element={<ProtectedRoute><OrdersPage /></ProtectedRoute>} /> */}
           {/* <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} /> */}
 
